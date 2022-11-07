@@ -8,9 +8,9 @@ spec:
       app: frontend-deployment
   spec:
     containers:
-    - name: pear
+    - name: oooo
       ports:
-      - containerPort: "3442"
+      - containerPort: "9911"
         name: http
   template:
     metadata:
@@ -18,6 +18,9 @@ spec:
         app: frontend-deployment
     spec:
       containers:
+      - name: pear
+        ports:
+        - containerPort: "3442"
       - image: foo/bar:latest
         name: app
         ports:
