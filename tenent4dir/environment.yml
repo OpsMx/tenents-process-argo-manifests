@@ -6,12 +6,6 @@ spec:
   selector:
     matchLabels:
       app: frontend-deployment
-  spec:
-    containers:
-    - name: oooo
-      ports:
-      - containerPort: "9911"
-        name: http
   template:
     metadata:
       labels:
@@ -21,6 +15,7 @@ spec:
       - name: santra
         ports:
         - containerPort: "3533"
+          name: http
       - image: foo/bar:latest
         name: app
         ports:
