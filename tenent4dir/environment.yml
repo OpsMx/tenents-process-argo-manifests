@@ -3,10 +3,8 @@ kind: Deployment
 metadata:
   name: testapp
 spec:
-  matchLabels:
-    app: frontend-deployment
-  metadata:
-    labels:
+  selector:
+    matchLabels:
       app: frontend-deployment
   spec:
     containers:
@@ -14,3 +12,15 @@ spec:
       ports:
       - containerPort: "3533"
         name: http
+  template:
+    metadata:
+      labels:
+        app: frontend-deployment
+    spec:
+      containers:
+      - image: foo/bar:latest
+        name: app
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
