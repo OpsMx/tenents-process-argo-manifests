@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testapp
+spec:
+  selector:
+    matchLabels:
+      app: frontend-deployment
+  template:
+    metadata:
+      labels:
+        app: frontend-deployment
+    spec:
+      containers:
+      - image: nginx:1.14.2
+        name: santra
+        ports:
+        - containerPort: "3533"
+          name: http
+      - image: foo/bar:latest
+        name: app
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
