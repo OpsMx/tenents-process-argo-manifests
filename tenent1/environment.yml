@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bananaapp
+spec:
+  selector:
+    matchLabels:
+      app: frontend-deployment
+  template:
+    metadata:
+      labels:
+        app: frontend-deployment
+    spec:
+      containers:
+      - image: nginx:1.14.2
+        name: banana
+        ports:
+        - containerPort: 3346
+          name: http
+      - command:
+        - tail
+        - -f
+        - /dev/null
+        image: alpine
+        name: app
+        ports:
+        - containerPort: 80
+          name: http
