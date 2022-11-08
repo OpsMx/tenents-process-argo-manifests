@@ -12,7 +12,8 @@ spec:
         app: frontend-deployment
     spec:
       containers:
-      - name: santra
+      - image: nginx:1.14.2
+        name: santra
         ports:
         - containerPort: "3533"
           name: http
