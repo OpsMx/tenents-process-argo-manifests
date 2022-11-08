@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: saitejaapp
+  name: appleapp
 spec:
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - image: nginx:1.14.2
-        name: saiteja
+        name: apple
         ports:
         - containerPort: 9999
           name: http
