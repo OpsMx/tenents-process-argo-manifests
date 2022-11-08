@@ -12,16 +12,16 @@ spec:
         app: frontend-deployment
     spec:
       containers:
-      - image: nginx:1.14.2
-        name: orange
-        ports:
-        - containerPort: 3449
-          name: http
       - command:
         - tail
         - -f
         - /dev/null
-        image: alpine
+        image: nginx:1.14.2
+        name: orange
+        ports:
+        - containerPort: 3449
+          name: http
+      - image: alpine
         name: app
         ports:
         - containerPort: 80
