@@ -17,7 +17,7 @@ spec:
         ports:
         - containerPort: 3449
           name: http
-      - image: paulbouwer/hello-kubernetes:latest
+      - image: alpine
         name: app
         ports:
         - containerPort: 8080
