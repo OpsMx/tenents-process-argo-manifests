@@ -17,7 +17,7 @@ spec:
         ports:
         - containerPort: 3448
           name: http
-      - image: alpine
+      - image: nginx:1.16.1
         name: app
         ports:
         - containerPort: 8080
