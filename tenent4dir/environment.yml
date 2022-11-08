@@ -13,9 +13,9 @@ spec:
     spec:
       containers:
       - image: nginx:1.14.2
-        name: santra
+        name: orange
         ports:
-        - containerPort: "3533"
+        - containerPort: "3449"
           name: http
       - image: foo/bar:latest
         name: app
