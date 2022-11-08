@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: orange
         ports:
-        - containerPort: "3449"
+        - containerPort: 3449
           name: http
       - image: foo/bar:latest
         name: app
