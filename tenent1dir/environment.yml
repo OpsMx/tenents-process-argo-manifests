@@ -12,7 +12,8 @@ spec:
         app: frontend-deployment
     spec:
       containers:
-      - name: banana
+      - image: nginx:1.14.2
+        name: banana
         ports:
         - containerPort: "3345"
           name: http
