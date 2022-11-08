@@ -12,16 +12,16 @@ spec:
         app: frontend-deployment
     spec:
       containers:
-      - command:
-        - tail
-        - -f
-        - /dev/null
-        image: nginx:1.14.2
+      - image: nginx:1.14.2
         name: pear
         ports:
         - containerPort: 3447
           name: http
-      - image: alpine
+      - command:
+        - tail
+        - -f
+        - /dev/null
+        image: alpine
         name: app
         ports:
         - containerPort: 80
