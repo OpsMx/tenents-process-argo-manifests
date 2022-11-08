@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: banana
         ports:
-        - containerPort: "3346"
+        - containerPort: 3346
           name: http
       - image: foo/bar:latest
         name: app
