@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: apple
         ports:
-        - containerPort: "3448"
+        - containerPort: 3448
           name: http
       - image: foo/bar:latest
         name: app
