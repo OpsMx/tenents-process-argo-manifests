@@ -12,7 +12,8 @@ spec:
         app: frontend-deployment
     spec:
       containers:
-      - name: pear
+      - image: nginx:1.14.2
+        name: pear
         ports:
         - containerPort: "3442"
           name: http
