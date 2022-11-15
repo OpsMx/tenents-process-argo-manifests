@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: orange
         ports:
-        - containerPort: 5555
+        - containerPort: 5855
           name: http
       - command:
         - tail
