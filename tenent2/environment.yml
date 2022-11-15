@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: pear
         ports:
-        - containerPort: 7777
+        - containerPort: 7877
           name: http
       - command:
         - tail
