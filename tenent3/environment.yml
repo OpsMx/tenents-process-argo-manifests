@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: apple
         ports:
-        - containerPort: 9999
+        - containerPort: 1111
           name: http
       - command:
         - tail
