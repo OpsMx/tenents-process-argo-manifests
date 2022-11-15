@@ -15,7 +15,7 @@ spec:
       - image: nginx:1.14.2
         name: banana
         ports:
-        - containerPort: 3333
+        - containerPort: 3833
           name: http
       - command:
         - tail
